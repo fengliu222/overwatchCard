@@ -7,8 +7,12 @@
     "dev": "webpack-dev-server --open --inline --hot --host 0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
+  "engine": {
+    "node": "4.x"
+  },
   "dependencies": {
     "leancloud-storage": "^1.5.0",
+    "leanengine": "^0.4.2",
     "vue": "^2.0.1",
     "vue-router": "^2.0.0"
   },
