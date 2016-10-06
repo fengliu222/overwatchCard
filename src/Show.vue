@@ -31,6 +31,10 @@ import AV from 'leancloud-storage'
 export default {
   beforeRouteEnter (to, from, next) {
     let query = new AV.Query('overwatch')
+    if(!to.query.id){
+      next('/create')
+      return 
+    }
     query.get(to.query.id).then((data)=>{
       if(data){
         next(vm => {
